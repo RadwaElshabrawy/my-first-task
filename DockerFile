@@ -1,11 +1,15 @@
-FROM openjdk
+FROM node:14-alpine
 
-WORKDIR/application 
+WORKDIR/app
 
-COPY ahmed.java .
+COPY index1.js package*.json ./
 
-RUN javac ahmed.java
+RUN npm install
 
-CMD java ahmed
+COPY . .
+
+EXPOSE 3000
+
+CMD node index1.js
 
 
