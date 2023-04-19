@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
 
-   steps:  
-     - uses: actions/checkout@v3     
+    steps:  
+      - uses: actions/checkout@v3     
 
-     - name: "login to docker hub"
-       run: docker login --username RadwaElshabrawy --password dckr_pat_UeH-Z2T7_2SZjcnDYgbSZX9SZ1E
+      - name: "login to docker hub"
+        run: docker login --username ${{secrets.DOCKER_USERNAME}} --password ${{secrets.DOCKER_TOKEN}}
